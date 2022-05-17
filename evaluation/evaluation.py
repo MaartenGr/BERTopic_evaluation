@@ -94,7 +94,7 @@ class Trainer:
         dataset: str,
         model_name: str,
         params: Mapping[str, Any],
-        topk: int = 10,
+        topk: int = 5,
         custom_dataset: bool = False,
         bt_embeddings: np.ndarray = None,
         bt_timestamps: List[str] = None,
