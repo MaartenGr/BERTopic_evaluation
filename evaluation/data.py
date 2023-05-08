@@ -62,9 +62,8 @@ class DataLoader:
         ```
         """
         if docs is not None:
-            return self.docs, None
-
-        if self.dataset == "trump":
+            self.docs, self.timestamps = docs, None
+        elif self.dataset == "trump":
             self.docs, self.timestamps = self._trump()
         elif self.dataset == "trump_dtm":
             self.docs, self.timestamps = self._trump_dtm()
