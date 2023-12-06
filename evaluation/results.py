@@ -118,7 +118,7 @@ class Results:
             self._load_all_results(dtm=True)
 
         if "Computation" in folders:
-            self._load_computation_results()
+            self._load_computation_results(f"{self.main_folder}Computation/")
 
     def _load_all_results(self, dtm=False):
         # Load data
@@ -338,8 +338,7 @@ class Results:
 
         self.dtm_results[dataset] = results
 
-    def _load_computation_results(self):
-        path = "../results/Computation/"
+    def _load_computation_results(self,path):
         files = os.listdir(path)
 
         computation = pd.read_csv(path + files[0])
